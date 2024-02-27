@@ -4,13 +4,33 @@
   max-width: 40rem;
 }
 
+.product h1 {
+  padding: 1rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .product ul {
   list-style: none;
   padding: 1rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .product li {
-  border: 1px solid #ccc;
+  border-radius: 8px;
   margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  position: relative;
+  border: 1px solid #000000;
+  text-wrap: wrap;
+}
+.product button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 2px;
   padding: 0.5rem;
 }

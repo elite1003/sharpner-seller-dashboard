@@ -21,20 +21,22 @@ const App = () => {
     });
   };
   const handleDelete = (id) => {
-    setProducts(products.filter((product) => product.id !== id));
+    const data = products.filter((product) => product.id !== id);
+    localStorage.setItem("products", JSON.stringify(data));
+    setProducts(data);
   };
   return (
-    <>
+    <div>
       <AddProduct onSubmitHandler={submitHandler} />
       <ProductList
-        heading="Product"
+        heading="Product List"
         products={products}
         handleDelete={handleDelete}
       />
-      <span style={{ textAlign: "center" }}>
-        Total value worth of product :{totalValue}
-      </span>
-    </>
+      <h1 style={{ textAlign: "center" }}>
+        Total value worth of product: {totalValue}
+      </h1>
+    </div>
   );
 };
 

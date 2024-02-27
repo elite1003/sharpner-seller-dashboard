@@ -9,7 +9,7 @@ const ProductList = (props) => {
       <ul>
         {props.products.map((product) => (
           <li key={product.id}>
-            {product.price}-{product.category}-{product.name}
+            {product.price} {product.name}
             <Button
               onClick={() => {
                 props.handleDelete(product.id);
